@@ -10,12 +10,7 @@ import lombok.Setter;
 @Table(name = "customer", uniqueConstraints = {
         @UniqueConstraint(name = "uc_customer_dni", columnNames = {"dni"})
 })
-public class Customer {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id", nullable = false)
-    private Long id;
-
+public class Customer extends BaseEntity {
     @Column(name = "first_name", nullable = false)
     private String firstName;
 
