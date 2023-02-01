@@ -13,7 +13,6 @@ import java.util.List;
 public abstract class BaseControllerImpl<E extends BaseEntity, S extends BaseService<E, Long>> implements BaseController<E, Long> {
     protected final S service;
 
-
     @GetMapping("/")
     public ResponseEntity<List<E>> getAll() {
         try {

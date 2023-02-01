@@ -1,17 +1,16 @@
 package com.aloyolaa.libraryapp.controller;
 
-import com.aloyolaa.libraryapp.entity.Author;
-import com.aloyolaa.libraryapp.service.AuthorService;
+import com.aloyolaa.libraryapp.entity.Location;
+import com.aloyolaa.libraryapp.service.LocationService;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/api/v1/authors")
+@RequestMapping("/api/v1/locations")
 @CrossOrigin(origins = "*")
-public class AuthorController extends BaseControllerImpl<Author, AuthorService> {
-
-    public AuthorController(AuthorService service) {
+public class LocationController extends BaseControllerImpl<Location, LocationService> {
+    public LocationController(LocationService service) {
         super(service);
     }
 }
